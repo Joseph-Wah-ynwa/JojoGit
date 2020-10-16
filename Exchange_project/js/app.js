@@ -63,7 +63,7 @@ document.getElementById("calc").addEventListener("submit", function (e) {
 
   //clear
   input.value = "";
-  input.focus();
+  // input.focus();
   from.value = "";
   to.value = "1";
 });
