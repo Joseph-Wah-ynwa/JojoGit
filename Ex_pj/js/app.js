@@ -63,7 +63,7 @@ document.getElementById("calc").addEventListener("submit", function (e) {
 
   //clear
   input.value = "";
-  // input.focus();
+  input.focus();
   from.value = "";
   to.value = "1";
 });
@@ -75,6 +75,15 @@ document.getElementById("calc").addEventListener("submit", function (e) {
     historyList.innerHTML = `<tr id="rowEmpty"><td colspan=4 style="text-align:center">There is no record.</td></tr>`;
   }
 })();
+
+//mode change
+let body = document.querySelector("body");
+let mode = document.getElementById("mode-change");
+let modeIcon = document.getElementById("mode-icon");
+mode.addEventListener("click", function () {
+  body.classList.toggle("night_mode");
+  modeIcon.classList.toggle("fa-sun");
+});
 
 function test() {
   let x = input.value;

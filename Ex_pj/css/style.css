@@ -4,8 +4,9 @@
   --secondary: #707070;
   --secondary-soft: #f2f2f2;
   --light: #ffffff;
-  --dark: #000000;
+  --dark: #3a3b3c;
   --br: 5px;
+  --animate-delay: 0.5s;
 }
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap");
 @font-face {
@@ -31,6 +32,11 @@
 .app {
   width: 700px;
   margin: 100px auto;
+}
+body,
+.mode-change,
+.mode-change i {
+  transition: 1s;
 }
 
 /*-------------------- Out put section ------------------------------*/
@@ -152,7 +158,20 @@ button:focus {
 .history-table th:last-child {
   text-align: right;
 }
-
+.mode-change {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--dark);
+  color: var(--light);
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+}
+.mode-change i {
+  color: var(--light);
+}
 @media screen and (max-width: 480px) {
   .app {
     width: 96%;
@@ -194,5 +213,9 @@ button:focus {
   input,
   option {
     font-size: 150%;
+  }
+  .mode-change {
+    right: 20px;
+    bottom: 20px;
   }
 }
