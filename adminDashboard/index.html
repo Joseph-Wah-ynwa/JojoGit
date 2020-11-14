@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" integrity="sha512-D0B6cFS+efdzUE/4wh5XF5599DtW7Q1bZOjAYGBfC0Lg9WjcrqPXZto020btDyrlDUrfYKsmzFvgf/9AB8J0Jw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="container-fluid main">
+        <div class="row">
+            <!-- sidebar -->
+            <section class="col-12 col-lg-3 col-xl-2 vh-100 aside">
+                <div class="d-flex justify-content-between align-items-center  mt-4 p-2">
+
+                    <div class="d-flex align-items-center">
+                        <span class="d-flex justify-content-center align-items-center bg-primary rounded p-2 mr-2">
+                            <i class="feather-shopping-bag font-weight-bolder text-light h4 mr-2 mb-0"></i>
+                        </span>
+                        <span class="h4 font-weight-bolder m-0 text-uppercase">My Shop</span>
+                    </div>
+                    
+
+                    <button class="hide-sidebar-btn btn btn-light d-lg-none">
+                        <i class="feather-x text-dark d-block " style="font-size: 2em;"></i>
+                    </button>
+                </div>
+
+                <div class="nav-menu">
+                    <ul>
+                        
+                        <li class="menu-item">
+                            <a href="#" class="menu-item-link cus_active">
+                                <span>
+                                    <i class="feather-home"></i>
+                                    Dashboard
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li class="menu-spacer"></li>
+
+                        <li class="menu-title">
+                            <span>
+                                Manage Item
+                            </span>
+                        </li>
+                        <li class="menu-item">
+                            <a href="item_add.html" class="menu-item-link">
+                                <span>
+                                    <i class="feather-plus-circle"></i>
+                                    Add Item
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="item_list.html" class="menu-item-link">
+                                <span>
+                                    <i class="feather-list"></i>
+                                    Item List
+                                </span>
+                                <span class="badge badge-pill bg-white shadow-sm">
+                                    15
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-spacer"></li>
+
+                       
+
+                        
+                    </ul>
+                </div>
+                
+            </section>
+            <!-- sidebar end -->
+            
+            <section class="col-12 col-lg-9 col-xl-10 vh-100 py-3 content">
+                
+                <!-- header -->
+                <div class="row header mb-3">
+                    <div class="col-12">
+                        <div class="bg-primary p-2 rounded d-flex align-items-center justify-content-between">
+
+                            <button  class="show-sidebar-btn btn btn-primary d-lg-none">
+                                <i class="feather-menu text-light" style="font-size: 2em;"></i>
+                            </button>
+                            
+                                <div class="form-inline d-none d-md-block">
+                                    <form action="" method="post"></form>
+                                        <input type="text" class="form-control mr-2">
+                                        <button class="btn btn-light">
+                                            <i class="feather-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="img/user/avatar4.jpg" class="user-img shadow-sm" alt=""> Joseph
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item text-danger" href="#">Log Out</a>
+                                    </div>
+                                  </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- header end -->
+                
+                <!-- search bar for phone -->
+                <div class="row d-block d-md-none">
+                    <div class="col-12">
+                        <div class="form-row mb-3">
+                            
+                                <div class="col-9">
+                                    <input type="text" class="form-control mr-2s">
+                                </div>
+                                <div class="col-3 d-flex justify-content-center">
+                                    <button class="btn btn-light shadow">
+                                        <i class="feather-search"></i>
+                                    </button>
+                                </div>
+
+                        
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- status  -->
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="card mb-3 status-card onclick='go('https://google.com')'">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-3 d-flex justify-content-center">
+                                        <i class="feather-shopping-bag h1 text-primary"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <p class="mb-3 h4 font-weight-bolder ">
+                                            <span class="counter">123 </span> 
+                                        </p>
+                                        <p class="mb-0 text-black-50">Today Order</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="card mb-3 status-card " onclick="go('https://google.com')">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-3 d-flex justify-content-center">
+                                        <i class="feather-users h1 text-primary"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <p class="mb-3 h4 font-weight-bolder ">
+                                            <span class="counter">2343</span> 
+                                        </p>
+                                        <p class="mb-0 text-black-50">Today Users</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="card mb-3 status-card " onclick="go('item_list.html')" >
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-3 d-flex justify-content-center">
+                                        <i class="feather-package h1 text-primary"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <p class="mb-3 h4 font-weight-bolder ">
+                                            <span class="counter">2542</span> 
+                                        </p>
+                                        <p class="mb-0 text-black-50">Today Items</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="card mb-3 status-card onclick='go('https://google.com')'">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-3 d-flex justify-content-center">
+                                        <i class="feather-map-pin h1 text-primary"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <p class="mb-3 h4 font-weight-bolder ">
+                                            <span class="counter">28</span> 
+                                        </p>
+                                        <p class="mb-0 text-black-50">Location Support</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row align-items-end">
+                    <!-- line chart -->
+                    <div class="col-12 col-xl-7">
+                        <div class="card overflow-hidden shadow mb-4">
+                            <div class="card-body p-0">
+                                <div class="d-flex justify-content-between align-items-center mb-2 p-2">
+                                    <h5 class="mb-0">Orders & Viewers</h5>
+                                    <div>
+                                        <img src="img/user/avatar1.jpg"  class="ov-img rounded-circle" alt="">
+                                        <img src="img/user/avatar2.jpg"  class="ov-img rounded-circle" alt="">
+                                        <img src="img/user/avatar3.jpg"  class="ov-img rounded-circle" alt="">
+                                        <img src="img/user/avatar4.jpg"  class="ov-img rounded-circle" alt="">
+                                        <img src="img/user/avatar5.jpg"  class="ov-img rounded-circle" alt="">
+                                    </div>
+                                </div>
+                                <div class="chart">
+                                    <canvas id="ov" height="100" ></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- line chart end -->
+                    <!-- img card -->
+                    <div class="col-12 col-md-6 col-xl-5">
+                        <div class="card mb-4 img-carosel">
+                            <div class="card-body p-5">
+
+                                <div id="carouselExampleIndicators" class="carousel img-card-carosel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators" style="bottom:-30px;">
+                                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active bg-dark"></li>
+                                      <li data-target="#carouselExampleIndicators" data-slide-to="1" class="bg-dark"></li>
+                                      <li data-target="#carouselExampleIndicators" data-slide-to="2" class="bg-dark"></li>
+                                      <li data-target="#carouselExampleIndicators" data-slide-to="3" class="bg-dark"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                        <div class="img-card">
+                                            <div class="d-flex align-items-end justify-content-between">
+                                                <div class="flex-grow-1">
+                                                    
+                                                    <h3 class="">Coffee</h3>
+                                                    <h6 class="font-weight-bolder text-black-50 mb-3">500 MMK</h6>
+                                                    <div class="progress mb-3">
+                                                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                               <img src="img/cup.png" class="img-card-item" alt="">
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <div class="img-card">
+                                            <div class="d-flex align-items-end justify-content-between">
+                                                <div class="flex-grow-1">
+                                                    
+                                                    <h3 class="">Memory Stick</h3>
+                                                    <h6 class="font-weight-bolder text-black-50 mb-3">12500 MMK</h6>
+                                                    <div class="progress mb-3">
+                                                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                               <img src="img/stick.png" class="img-card-item" alt="">
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <div class="img-card">
+                                            <div class="d-flex align-items-end justify-content-between">
+                                                <div class="flex-grow-1">
+                                                    
+                                                    <h3 class="">Diary Book</h3>
+                                                    <h6 class="font-weight-bolder text-black-50 mb-3">2500 MMK</h6>
+                                                    <div class="progress mb-3">
+                                                        <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                               <img src="img/book.png" class="img-card-item" alt="">
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <div class="img-card">
+                                            <div class="d-flex align-items-end justify-content-between">
+                                                <div class="flex-grow-1">
+                                                    
+                                                    <h3 class="">Note Book</h3>
+                                                    <h6 class="font-weight-bolder text-black-50 mb-3">4000 MMK</h6>
+                                                    <div class="progress mb-3">
+                                                        <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                               <img src="img/book2.png" class="img-card-item" alt="">
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- img-card-end -->
+                    <!-- doughnut -->
+                    <div class="col-12 col-md-6 col-xl-5">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2 p-2">
+                                    <h5 class="mb-0">Orders & Places</h5>
+                                    <div>
+                                        <i class="feather-pie-chart mb-0 h4 text-primary"></i>
+                                    </div>
+                                </div>
+                                <canvas id="op" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- doughnut-end -->
+                    <div class="col-12 col-xl-7">
+                        <div class="card mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2 p-2">
+                                <h5 class="mb-0">Subscriber List</h5>
+                                <div>
+                                    
+                                    <i class="feather-more-vertical mb-0 h4 text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                            <table class="table mb-0 table-hover sub-list">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Company</th>
+                                        <th>Start Date</th>
+                                        <th>Status</th>
+                                        <th>Amount</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Lional Messi</td>
+                                        <td>Barcelona</td>
+                                        <td>March 23, 2005</td>
+                                        <td><span class="badge badge-pill badge-danger ">Close</span></td>
+                                        <td>$500000</td>
+                                        <td class="center-align"><a href="#"><i class="feather-trash-2 text-danger"></i></a></td>
+                        
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+               
+              
+            </section>
+        </div>
+    </section>
+    
+
+    <script src="vendor/jquery-3.3.1.min.js"></script>    
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/way_point/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter_up/counter_up.js"></script>
+    <script src="vendor/chart_js/chart.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

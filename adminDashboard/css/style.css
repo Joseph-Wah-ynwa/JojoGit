@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --primary-soft:#f3f3f3;
+    --dark:#111111;
+}
+
+/* width */
+::-webkit-scrollbar {
+   
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius:20px;
+    background: var(--primary); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0116d6; 
+  }
+  
+
+.aside{
+    overflow: scroll;
+}
+.nav-menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-title{
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #999999;
+}
+.menu-item{
+
+}
+.menu-item-link{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.25rem;
+    color: var(--dark);
+   transition: 0.3s;
+}
+
+.menu-item-link:hover{
+    text-decoration: none;
+    background-color: rgb(228, 228, 228);
+    color: var(--dark);
+}
+.menu-item-link i{}
+.menu-item-link span.badge{
+    padding: 5px;
+    color: var(--primary) !important;
+}
+.cus_active{
+    background-color: var(--primary);
+    color:var(--light);
+}
+.menu-spacer{
+    padding: 15px;
+}
+
+.content{
+    background-color: var(--primary-soft);
+    box-shadow: 0 0 5px #00000020 inset;
+    overflow: scroll;
+    
+}
+.header{
+    position: sticky;
+    top: 0.4rem;
+    z-index: 2000;
+}
+.hide-header{
+    z-index: 0;
+}
+
+.aside-open{
+    
+}
+.show-sidebar-btn{
+    cursor: pointer;
+}
+
+.user-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.card{
+    border: none;
+}
+.status-card{
+    transition: 0.5s;
+}
+.status-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.status-card:active{
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.ov-img{
+    margin-left: -25px;
+}
+.img-card-carosel{
+    margin-top: -120px;
+}
+.img-card-item{
+    height: 200px;
+    margin-right: 10px;
+}
+.sub-list tr{
+    transition: 0.3s;
+    cursor: pointer;
+}
+.sub-list tr:active{
+    transform: scale(1.04);
+}
+
+.full-screen-card{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    
+}
+
+@media screen and (max-width:780px){
+    .aside{
+        position: fixed;
+        width: 300px;
+        z-index: 2001;
+        display: block !important;
+        background-color:#f7f7f7;
+        margin-left: -100%;
+    }
+    .img-carosel{
+        margin-top: 100px;
+    }
+}
