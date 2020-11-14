@@ -33,6 +33,11 @@
 .aside{
     overflow: scroll;
 }
+.aside-header{
+    position: sticky;
+    top:20px;
+    background:#fff;
+}
 .nav-menu ul{
     list-style-type: none;
     padding: 0;
